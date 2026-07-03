@@ -17,7 +17,7 @@
   --veil-strong: rgba(16, 15, 13, 0.55);
   --veil-mid: rgba(16, 15, 13, 0.35);
 
-  --serif: "Playfair Display", "Georgia", serif;
+  --serif: "Cormorant Garamond", "Georgia", serif;
   --sans: "Inter", system-ui, sans-serif;
 
   --gutter: clamp(1.25rem, 4vw, 4rem);
