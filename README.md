@@ -1,8 +1,13 @@
 # Galeria AUVP
 
-Landing page do Museu de Artes AUVP — uma galeria virtual em que a obra é o
-centro: imagens em largura total, tipografia pontual e cards que se adaptam
-às dimensões reais de cada peça.
+Landing page do Museu de Artes AUVP (Goiânia, GO) — uma galeria virtual em que
+a obra é o centro: imagens em largura total, tipografia pontual e cards que se
+adaptam às dimensões reais de cada peça.
+
+Recursos: tema claro/escuro que segue o sistema (alternável no header, com
+persistência), hero com carrossel de 3 obras (crossfade + Ken Burns), parallax
+sutil nas imagens de largura total, reveals escalonados e marquee — tudo
+respeitando `prefers-reduced-motion`. Cor de destaque: verde `#5A8770`.
 
 ## Como rodar
 
@@ -21,9 +26,16 @@ Abra `http://localhost:8000` (ou simplesmente abra `index.html` no navegador).
 
 ```
 index.html      # conteúdo e dados das obras (data-attributes)
-css/style.css   # design system: tipografia, galeria justificada, lightbox
-js/main.js      # reveal on scroll, lightbox, fluxo de aquisição, fallbacks
+css/style.css   # design system: tokens de tema, tipografia, galeria, lightbox
+js/main.js      # tema, carrossel, parallax, reveals, lightbox, fallbacks
 ```
+
+## Temas
+
+Os temas são tokens CSS em `:root` (escuro, padrão) e `:root[data-theme="light"]`.
+Um script inline no `<head>` aplica o tema salvo (ou o do sistema) antes da
+primeira pintura, o botão no header alterna e persiste em `localStorage`, e —
+sem preferência salva — a página segue mudanças do sistema em tempo real.
 
 ## Como funcionam os cards adaptativos
 
