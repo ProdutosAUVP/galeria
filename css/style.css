@@ -521,14 +521,15 @@ em { font-style: italic; }
   overflow: hidden;
 }
 .interlude__ghost {
-  position: absolute; left: 50%; top: 50%;
-  transform: translate(-50%, calc(-50% + var(--py, 0px)));
-  font-family: var(--serif); font-style: italic;
-  font-size: clamp(7rem, 24vw, 20rem);
-  line-height: 1;
+  display: block;
+  transform: translateY(var(--py, 0px));
+  font-family: var(--sans); font-weight: 600;
+  font-size: 0.72rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
   color: transparent;
-  -webkit-text-stroke: 1px color-mix(in srgb, var(--ink) 14%, transparent);
-  white-space: nowrap;
+  -webkit-text-stroke: 1px color-mix(in srgb, var(--ink) 32%, transparent);
+  margin-bottom: 1.4rem;
   pointer-events: none;
   will-change: transform;
 }
