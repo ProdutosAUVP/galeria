@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galeria AUVP — Museu de Artes</title>
+  <meta name="description" content="Galeria AUVP — acervo virtual do Museu de Artes AUVP. Obras-primas em alta resolução, curadoria dedicada e aquisição assistida." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='42' fill='%23C24A26'/></svg>" />
+</head>
+<body>
+
+  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="topo">
+    <a class="brand" href="#topo">
+      <span class="brand__mark" aria-hidden="true"></span>
+      Galeria<br />AUVP
+    </a>
+    <nav class="site-nav" aria-label="Navegação principal">
+      <a href="#colecao">Coleção</a>
+      <a href="#destaque">Em destaque</a>
+      <a href="#museu">O museu</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <a class="header-cta" href="#colecao">Acervo — 12 obras</a>
+  </header>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <figure class="hero__media" aria-hidden="true">
+        <img
+          src="https://commons.wikimedia.org/wiki/Special:FilePath/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg?width=2400"
+          alt="" fetchpriority="high" />
+      </figure>
+      <div class="hero__veil" aria-hidden="true"></div>
+
+      <div class="hero__content">
+        <p class="kicker reveal">Museu de Artes AUVP — Acervo &amp; Aquisições</p>
+        <h1 class="hero__title">
+          <span class="line"><span>Onde a arte</span></span>
+          <span class="line line--italic"><span>encontra morada</span></span>
+        </h1>
+        <div class="hero__meta reveal">
+          <p class="hero__caption">
+            Em exibição — <em>A Noite Estrelada</em>, Vincent van Gogh, 1889.<br />
+            Óleo sobre tela, 73,7 × 92,1 cm.
+          </p>
+          <a class="link-arrow" href="#colecao">Visitar a coleção <span aria-hidden="true">↘</span></a>
+        </div>
+      </div>
+
+      <div class="hero__scroll" aria-hidden="true"><span></span></div>
+    </section>
+
+    <!-- ============ MANIFESTO ============ -->
+    <section class="manifesto">
+      <p class="manifesto__text reveal">
+        Não vendemos quadros. Oferecemos o privilégio de
+        <em>conviver com uma obra-prima</em> — selecionada por curadores,
+        entregue com rigor de museu.
+      </p>
+      <p class="manifesto__index reveal" aria-hidden="true">Nº 001 — 012</p>
+    </section>
+
+    <!-- ============ COLEÇÃO ============ -->
+    <section class="collection" id="colecao">
+      <header class="section-head reveal">
+        <h2 class="section-head__title">A Coleção</h2>
+        <p class="section-head__note">Cada card respeita as proporções reais da obra.<br />Selecione uma peça para ver detalhes e adquirir.</p>
+      </header>
+
+      <!-- Linha 1 -->
+      <div class="art-row">
+        <figure class="art reveal" style="--r: 0.876" tabindex="0" role="button"
+          data-title="Moça com o Brinco de Pérola" data-artist="Johannes Vermeer" data-year="c. 1665"
+          data-tech="Óleo sobre tela" data-dim="44,5 × 39 cm" data-price="R$ 1.850.000" data-num="01"
+          data-img="https://commons.wikimedia.org/wiki/Special:FilePath/Meisje_met_de_parel.jpg?width=1600">
+          <div class="art__frame">
+            <img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Meisje_met_de_parel.jpg?width=1200"
+              alt="Moça com o Brinco de Pérola, de Johannes Vermeer" />
+          </div>
+          <figcaption class="art__caption">
+            <span class="art__num">01</span>
+            <span class="art__name">Moça com o Brinco de Pérola <em>— Vermeer, c. 1665</em></span>
+            <span class="art__price">R$ 1.850.000</span>
+          </figcaption>
+        </figure>
+
+        <figure class="art reveal" style="--r: 1.475" tabindex="0" role="button"
+          data-title="A Grande Onda de Kanagawa" data-artist="Katsushika Hokusai" data-year="c. 1831"
+          data-tech="Xilogravura (nishiki-e)" data-dim="25,7 × 37,9 cm" data-price="R$ 480.000" data-num="02"
+          data-img="https://commons.wikimedia.org/wiki/Special:FilePath/Tsunami_by_hokusai_19th_century.jpg?width=1600">
+          <div class="art__frame">
+            <img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Tsunami_by_hokusai_19th_century.jpg?width=1200"
+              alt="A Grande Onda de Kanagawa, de Katsushika Hokusai" />
+          </div>
+          <figcaption class="art__caption">
+            <span class="art__num">02</span>
+            <span class="art__name">A Grande Onda de Kanagawa <em>— Hokusai, c. 1831</em></span>
+            <span class="art__price">R$ 480.000</span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <!-- Linha 2 -->
+      <div class="art-row">
+        <figure class="art reveal" style="--r: 1.313" tabindex="0" role="button"
+          data-title="Impressão, Nascer do Sol" data-artist="Claude Monet" data-year="1872"
+          data-tech="Óleo sobre tela" data-dim="48 × 63 cm" data-price="R$ 2.400.000" data-num="03"
+          data-img="https://commons.wikimedia.org/wiki/Special:FilePath/Claude_Monet,_Impression,_soleil_levant.jpg?width=1600">
+          <div class="art__frame">
+            <img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Claude_Monet,_Impression,_soleil_levant.jpg?width=1200"
+              alt="Impressão, Nascer do Sol, de Claude Monet" />
+          </div>
+          <figcaption class="art__caption">
+            <span class="art__num">03</span>
+            <span class="art__name">Impressão, Nascer do Sol <em>— Monet, 1872</em></span>
+            <span class="art__price">R$ 2.400.000</span>
+          </figcaption>
+        </figure>
+
+        <figure class="art reveal" style="--r: 0.789" tabindex="0" role="button"
+          data-title="O Caminhante sobre o Mar de Névoa" data-artist="Caspar David Friedrich" data-year="c. 1818"
+          data-tech="Óleo sobre tela" data-dim="94,8 × 74,8 cm" data-price="R$ 980.000" data-num="04"
+          data-img="https://commons.wikimedia.org/wiki/Special:FilePath/Caspar_David_Friedrich_-_Wanderer_above_the_sea_of_fog.jpg?width=1600">
+          <div class="art__frame">
+            <img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Caspar_David_Friedrich_-_Wanderer_above_the_sea_of_fog.jpg?width=1200"
+              alt="O Caminhante sobre o Mar de Névoa, de Caspar David Friedrich" />
+          </div>
+          <figcaption class="art__caption">
+            <span class="art__num">04</span>
+            <span class="art__name">O Caminhante sobre o Mar de Névoa <em>— Friedrich, c. 1818</em></span>
+            <span class="art__price">R$ 980.000</span>
+          </figcaption>
+        </figure>
+
+        <figure class="art reveal" style="--r: 1.0" tabindex="0" role="button"
+          data-title="O Beijo" data-artist="Gustav Klimt" data-year="1907–1908"
+          data-tech="Óleo e folha de ouro sobre tela" data-dim="180 × 180 cm" data-price="Sob consulta" data-num="05"
+          data-img="https://commons.wikimedia.org/wiki/Special:FilePath/Gustav_Klimt_016.jpg?width=1600">
+          <div class="art__frame">
+            <img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Gustav_Klimt_016.jpg?width=1200"
+              alt="O Beijo, de Gustav Klimt" />
+          </div>
+          <figcaption class="art__caption">
+            <span class="art__num">05</span>
+            <span class="art__name">O Beijo <em>— Klimt, 1907–1908</em></span>
+            <span class="art__price">Sob consulta</span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <!-- Obra em largura total -->
+      <figure class="art art--full reveal" id="destaque" tabindex="0" role="button"
+        data-title="Tarde de Domingo na Ilha de Grande Jatte" data-artist="Georges Seurat" data-year="1884–1886"
+        data-tech="Óleo sobre tela" data-dim="207,6 × 308 cm" data-price="R$ 5.200.000" data-num="06"
+        data-img="https://commons.wikimedia.org/wiki/Special:FilePath/A_Sunday_on_La_Grande_Jatte,_Georges_Seurat,_1884.jpg?width=2400">
+        <div class="art__frame">
+          <img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/A_Sunday_on_La_Grande_Jatte,_Georges_Seurat,_1884.jpg?width=2400"
+            alt="Tarde de Domingo na Ilha de Grande Jatte, de Georges Seurat" />
+        </div>
+        <figcaption class="art__caption art__caption--full">
+          <div>
+            <span class="art__num">06 — Em destaque</span>
+            <h3 class="art__display">Tarde de Domingo<br /><em>na Ilha de Grande Jatte</em></h3>
+          </div>
+          <div class="art__caption-side">
+            <p>Georges Seurat, 1884–1886<br />Óleo sobre tela — 207,6 × 308 cm</p>
+            <span class="btn-ghost">Adquirir — R$ 5.200.000</span>
+          </div>
+        </figcaption>
+      </figure>
+
+      <!-- Linha 3 -->
+      <div class="art-row">
+        <figure class="art reveal" style="--r: 1.436" tabindex="0" role="button"
+          data-title="Composição VIII" data-artist="Wassily Kandinsky" data-year="1923"
+          data-tech="Óleo sobre tela" data-dim="140 × 201 cm" data-price="R$ 3.100.000" data-num="07"
+          data-img="https://commons.wikimedia.org/wiki/Special:FilePath/Vassily_Kandinsky,_1923_-_Composition_8,_huile_sur_toile,_140_cm_x_201_cm,_Mus%C3%A9e_Guggenheim,_New_York.jpg?width=1600">
+          <div class="art__frame">
+            <img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Vassily_Kandinsky,_1923_-_Composition_8,_huile_sur_toile,_140_cm_x_201_cm,_Mus%C3%A9e_Guggenheim,_New_York.jpg?width=1200"
+              alt="Composição VIII, de Wassily Kandinsky" />
+          </div>
+          <figcaption class="art__caption">
+            <span class="art__num">07</span>
+            <span class="art__name">Composição VIII <em>— Kandinsky, 1923</em></span>
+            <span class="art__price">R$ 3.100.000</span>
+          </figcaption>
+        </figure>
+
+        <figure class="art reveal" style="--r: 0.901" tabindex="0" role="button"
+          data-title="A Leiteira" data-artist="Johannes Vermeer" data-year="c. 1658"
+          data-tech="Óleo sobre tela" data-dim="45,5 × 41 cm" data-price="R$ 1.650.000" data-num="08"
+          data-img="https://commons.wikimedia.org/wiki/Special:FilePath/Johannes_Vermeer_-_Het_melkmeisje_-_Google_Art_Project.jpg?width=1600">
+          <div class="art__frame">
+            <img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Johannes_Vermeer_-_Het_melkmeisje_-_Google_Art_Project.jpg?width=1200"
+              alt="A Leiteira, de Johannes Vermeer" />
+          </div>
+          <figcaption class="art__caption">
+            <span class="art__num">08</span>
+            <span class="art__name">A Leiteira <em>— Vermeer, c. 1658</em></span>
+            <span class="art__price">R$ 1.650.000</span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <!-- Interlúdio -->
+      <aside class="interlude reveal">
+        <blockquote>
+          “A arte lava da alma <em>a poeira do cotidiano</em>.”
+          <cite>— Pablo Picasso</cite>
+        </blockquote>
+      </aside>
+
+      <!-- Linha 4 -->
+      <div class="art-row">
+        <figure class="art reveal" style="--r: 0.81" tabindex="0" role="button"
+          data-title="Mulher com Sombrinha" data-artist="Claude Monet" data-year="1875"
+          data-tech="Óleo sobre tela" data-dim="100 × 81 cm" data-price="R$ 2.150.000" data-num="09"
+          data-img="https://commons.wikimedia.org/wiki/Special:FilePath/Claude_Monet_-_Woman_with_a_Parasol_-_Madame_Monet_and_Her_Son_-_Google_Art_Project.jpg?width=1600">
+          <div class="art__frame">
+            <img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Claude_Monet_-_Woman_with_a_Parasol_-_Madame_Monet_and_Her_Son_-_Google_Art_Project.jpg?width=1200"
+              alt="Mulher com Sombrinha — Madame Monet e seu Filho, de Claude Monet" />
+          </div>
+          <figcaption class="art__caption">
+            <span class="art__num">09</span>
+            <span class="art__name">Mulher com Sombrinha <em>— Monet, 1875</em></span>
+            <span class="art__price">R$ 2.150.000</span>
+          </figcaption>
+        </figure>
+
+        <figure class="art reveal" style="--r: 1.252" tabindex="0" role="button"
+          data-title="Amendoeira em Flor" data-artist="Vincent van Gogh" data-year="1890"
+          data-tech="Óleo sobre tela" data-dim="73,5 × 92 cm" data-price="R$ 2.900.000" data-num="10"
+          data-img="https://commons.wikimedia.org/wiki/Special:FilePath/Vincent_van_Gogh_-_Almond_blossom_-_Google_Art_Project.jpg?width=1600">
+          <div class="art__frame">
+            <img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Vincent_van_Gogh_-_Almond_blossom_-_Google_Art_Project.jpg?width=1200"
+              alt="Amendoeira em Flor, de Vincent van Gogh" />
+          </div>
+          <figcaption class="art__caption">
+            <span class="art__num">10</span>
+            <span class="art__name">Amendoeira em Flor <em>— Van Gogh, 1890</em></span>
+            <span class="art__price">R$ 2.900.000</span>
+          </figcaption>
+        </figure>
+
+        <figure class="art reveal" style="--r: 0.839" tabindex="0" role="button"
+          data-title="Gótico Americano" data-artist="Grant Wood" data-year="1930"
+          data-tech="Óleo sobre madeira" data-dim="78 × 65,3 cm" data-price="R$ 1.200.000" data-num="11"
+          data-img="https://commons.wikimedia.org/wiki/Special:FilePath/Grant_Wood_-_American_Gothic_-_Google_Art_Project.jpg?width=1600">
+          <div class="art__frame">
+            <img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Grant_Wood_-_American_Gothic_-_Google_Art_Project.jpg?width=1200"
+              alt="Gótico Americano, de Grant Wood" />
+          </div>
+          <figcaption class="art__caption">
+            <span class="art__num">11</span>
+            <span class="art__name">Gótico Americano <em>— Grant Wood, 1930</em></span>
+            <span class="art__price">R$ 1.200.000</span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <!-- Obra final em largura total -->
+      <figure class="art art--full reveal" tabindex="0" role="button"
+        data-title="A Ronda Noturna" data-artist="Rembrandt van Rijn" data-year="1642"
+        data-tech="Óleo sobre tela" data-dim="363 × 437 cm" data-price="Sob consulta" data-num="12"
+        data-img="https://commons.wikimedia.org/wiki/Special:FilePath/The_Night_Watch_-_HD.jpg?width=2400">
+        <div class="art__frame">
+          <img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/The_Night_Watch_-_HD.jpg?width=2400"
+            alt="A Ronda Noturna, de Rembrandt van Rijn" />
+        </div>
+        <figcaption class="art__caption art__caption--full">
+          <div>
+            <span class="art__num">12</span>
+            <h3 class="art__display">A Ronda <em>Noturna</em></h3>
+          </div>
+          <div class="art__caption-side">
+            <p>Rembrandt van Rijn, 1642<br />Óleo sobre tela — 363 × 437 cm</p>
+            <span class="btn-ghost">Adquirir — Sob consulta</span>
+          </div>
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- ============ O MUSEU ============ -->
+    <section class="about" id="museu">
+      <div class="about__grid">
+        <p class="kicker reveal">O museu</p>
+        <div>
+          <h2 class="about__title reveal">Curadoria de museu,<br /><em>acesso de colecionador.</em></h2>
+          <p class="about__text reveal">
+            A Galeria AUVP é o braço de aquisições do Museu de Artes AUVP.
+            Cada obra do acervo passa por autenticação, laudo de conservação e
+            documentação de proveniência antes de ser oferecida — e a compra é
+            conduzida pessoalmente por um curador, do primeiro contato à
+            instalação na sua parede.
+          </p>
+          <ul class="about__list reveal">
+            <li><span>01</span> Autenticação e proveniência documentadas</li>
+            <li><span>02</span> Transporte climatizado e seguro incluso</li>
+            <li><span>03</span> Instalação assistida por conservadores</li>
+            <li><span>04</span> Recompra garantida pelo valor de catálogo</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer" id="contato">
+    <div class="site-footer__cta reveal">
+      <p class="kicker">Aquisições</p>
+      <a class="site-footer__mail" href="mailto:galeria@auvp.com.br">galeria@auvp.com.br</a>
+      <p class="site-footer__note">Atendimento por agendamento — São Paulo, Brasil</p>
+    </div>
+    <div class="site-footer__bottom">
+      <span>© 2026 Galeria AUVP — Museu de Artes AUVP</span>
+      <span>Obras em domínio público exibidas como placeholder — Wikimedia Commons</span>
+      <a href="#topo">Voltar ao topo ↑</a>
+    </div>
+  </footer>
+
+  <!-- ============ LIGHTBOX / AQUISIÇÃO ============ -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="lbTitle">
+    <button class="lightbox__close" id="lbClose" aria-label="Fechar">×</button>
+    <div class="lightbox__inner">
+      <div class="lightbox__media"><img id="lbImg" src="" alt="" /></div>
+      <div class="lightbox__panel">
+        <p class="art__num" id="lbNum"></p>
+        <h3 class="lightbox__title" id="lbTitle"></h3>
+        <p class="lightbox__artist" id="lbArtist"></p>
+        <dl class="lightbox__specs">
+          <div><dt>Técnica</dt><dd id="lbTech"></dd></div>
+          <div><dt>Dimensões</dt><dd id="lbDim"></dd></div>
+          <div><dt>Valor</dt><dd id="lbPrice"></dd></div>
+        </dl>
+        <button class="btn-solid" id="lbBuy">Adquirir esta obra</button>
+        <p class="lightbox__confirm" id="lbConfirm" hidden>
+          Solicitação registrada. Um curador da Galeria AUVP entrará em
+          contato em até 24 horas para conduzir a aquisição.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
