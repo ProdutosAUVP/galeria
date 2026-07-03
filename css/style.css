@@ -12,7 +12,7 @@
   --accent-soft: #d9633c;
   --hairline: rgba(236, 229, 216, 0.14);
 
-  --serif: "Fraunces", "Georgia", serif;
+  --serif: "Playfair Display", "Georgia", serif;
   --sans: "Inter", system-ui, sans-serif;
 
   --gutter: clamp(1.25rem, 4vw, 4rem);
@@ -164,7 +164,7 @@ em { font-style: italic; }
 
 .hero__title {
   font-family: var(--serif);
-  font-weight: 300;
+  font-weight: 400;
   font-size: clamp(3.2rem, 11.5vw, 10.5rem);
   line-height: 0.98;
   letter-spacing: -0.02em;
@@ -221,7 +221,7 @@ em { font-style: italic; }
 }
 .manifesto__text {
   font-family: var(--serif);
-  font-weight: 300;
+  font-weight: 400;
   font-size: clamp(1.6rem, 3.4vw, 3rem);
   line-height: 1.28;
   letter-spacing: -0.01em;
@@ -242,7 +242,7 @@ em { font-style: italic; }
 }
 .section-head__title {
   font-family: var(--serif);
-  font-weight: 300; font-style: italic;
+  font-weight: 400; font-style: italic;
   font-size: clamp(2.4rem, 6vw, 5rem);
   line-height: 1;
   letter-spacing: -0.02em;
@@ -344,7 +344,7 @@ em { font-style: italic; }
 }
 .art__display {
   font-family: var(--serif);
-  font-weight: 300;
+  font-weight: 400;
   font-size: clamp(1.9rem, 4.6vw, 4rem);
   line-height: 1.02;
   letter-spacing: -0.015em;
@@ -388,7 +388,7 @@ em { font-style: italic; }
 }
 .interlude blockquote {
   font-family: var(--serif);
-  font-weight: 300;
+  font-weight: 400;
   font-size: clamp(1.7rem, 4vw, 3.4rem);
   line-height: 1.25;
   max-width: 24ch;
@@ -418,7 +418,7 @@ em { font-style: italic; }
 }
 .about__title {
   font-family: var(--serif);
-  font-weight: 300;
+  font-weight: 400;
   font-size: clamp(2rem, 4.4vw, 3.8rem);
   line-height: 1.08;
   letter-spacing: -0.015em;
@@ -449,7 +449,7 @@ em { font-style: italic; }
 .site-footer__cta { text-align: center; margin-bottom: clamp(4rem, 9vh, 7rem); }
 .site-footer__mail {
   display: inline-block;
-  font-family: var(--serif); font-weight: 300; font-style: italic;
+  font-family: var(--serif); font-weight: 400; font-style: italic;
   font-size: clamp(1.8rem, 5.4vw, 4.4rem);
   letter-spacing: -0.01em;
   margin: 0.4em 0 0.5em;
@@ -509,7 +509,7 @@ em { font-style: italic; }
 
 .lightbox__title {
   font-family: var(--serif);
-  font-weight: 300;
+  font-weight: 400;
   font-size: clamp(1.8rem, 3.2vw, 2.8rem);
   line-height: 1.08; letter-spacing: -0.015em;
   margin: 0.5rem 0 0.4rem;
