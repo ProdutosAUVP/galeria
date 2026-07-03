@@ -10,7 +10,18 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='42' fill='%23C24A26'/></svg>" />
+  <meta name="color-scheme" content="dark light" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='42' fill='%235A8770'/></svg>" />
+  <script>
+    /* aplica o tema antes da primeira pintura para evitar flash */
+    (() => {
+      let saved = null;
+      try { saved = localStorage.getItem("auvp-theme"); } catch (e) {}
+      const theme = saved ||
+        (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+      document.documentElement.dataset.theme = theme;
+    })();
+  </script>
 </head>
 <body>
 
@@ -28,32 +39,68 @@
       <a href="#museu">O museu</a>
       <a href="#contato">Contato</a>
     </nav>
-    <a class="header-cta" href="#colecao">Acervo — 12 obras</a>
+    <div class="header-tools">
+      <a class="header-cta" href="#colecao">Acervo — 12 obras</a>
+      <button class="theme-toggle" id="themeToggle" type="button"
+        aria-label="Alternar entre tema claro e escuro" title="Alternar tema">
+        <svg class="theme-toggle__sun" viewBox="0 0 24 24" width="16" height="16" fill="none"
+          stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4.4" />
+          <path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M19.1 4.9l-1.7 1.7M6.6 17.4l-1.7 1.7" />
+        </svg>
+        <svg class="theme-toggle__moon" viewBox="0 0 24 24" width="16" height="16" fill="none"
+          stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M20.4 14.2A8.5 8.5 0 0 1 9.8 3.6a8.5 8.5 0 1 0 10.6 10.6Z" />
+        </svg>
+      </button>
+    </div>
   </header>
 
   <main>
 
-    <!-- ============ HERO ============ -->
+    <!-- ============ HERO / CARROSSEL ============ -->
     <section class="hero">
-      <figure class="hero__media" aria-hidden="true">
-        <img
-          src="https://commons.wikimedia.org/wiki/Special:FilePath/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg?width=2400"
-          alt="" fetchpriority="high" />
-      </figure>
+      <div class="hero__slides" id="heroSlides" data-parallax="0.14" data-parallax-clamp="0.055" aria-hidden="true">
+        <figure class="hero__slide is-active"
+          data-title="A Noite Estrelada" data-artist="Vincent van Gogh" data-year="1889"
+          data-tech="Óleo sobre tela" data-dim="73,7 × 92,1 cm">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg?width=2400"
+            alt="" fetchpriority="high" />
+        </figure>
+        <figure class="hero__slide"
+          data-title="Amendoeira em Flor" data-artist="Vincent van Gogh" data-year="1890"
+          data-tech="Óleo sobre tela" data-dim="73,5 × 92 cm">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Vincent_van_Gogh_-_Almond_blossom_-_Google_Art_Project.jpg?width=2400"
+            alt="" loading="lazy" />
+        </figure>
+        <figure class="hero__slide"
+          data-title="A Grande Onda de Kanagawa" data-artist="Katsushika Hokusai" data-year="c. 1831"
+          data-tech="Xilogravura" data-dim="25,7 × 37,9 cm">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Tsunami_by_hokusai_19th_century.jpg?width=2400"
+            alt="" loading="lazy" />
+        </figure>
+      </div>
       <div class="hero__veil" aria-hidden="true"></div>
 
       <div class="hero__content">
-        <p class="kicker reveal">Museu de Artes AUVP — Acervo &amp; Aquisições</p>
+        <p class="kicker reveal">Museu de Artes AUVP — Goiânia, GO — Acervo &amp; Aquisições</p>
         <h1 class="hero__title">
           <span class="line"><span>Onde a arte</span></span>
           <span class="line line--italic"><span>encontra morada</span></span>
         </h1>
         <div class="hero__meta reveal">
-          <p class="hero__caption">
+          <p class="hero__caption" id="heroCaption">
             Em exibição — <em>A Noite Estrelada</em>, Vincent van Gogh, 1889.<br />
             Óleo sobre tela, 73,7 × 92,1 cm.
           </p>
-          <a class="link-arrow" href="#colecao">Visitar a coleção <span aria-hidden="true">↘</span></a>
+          <div class="hero__nav">
+            <a class="link-arrow" href="#colecao">Visitar a coleção <span aria-hidden="true">↘</span></a>
+            <div class="carousel-nav" role="group" aria-label="Navegação das obras em exibição">
+              <span class="carousel-nav__count" id="heroCount">01 / 03</span>
+              <button class="carousel-nav__btn" id="heroPrev" type="button" aria-label="Obra anterior">←</button>
+              <button class="carousel-nav__btn carousel-nav__btn--accent" id="heroNext" type="button" aria-label="Próxima obra">→</button>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -69,6 +116,14 @@
       </p>
       <p class="manifesto__index reveal" aria-hidden="true">Nº 001 — 012</p>
     </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Galeria AUVP — Goiânia · GO — Acervo Permanente — Curadoria Dedicada — Aquisições Assistidas —&nbsp;</span>
+        <span>Galeria AUVP — Goiânia · GO — Acervo Permanente — Curadoria Dedicada — Aquisições Assistidas —&nbsp;</span>
+      </div>
+    </div>
 
     <!-- ============ COLEÇÃO ============ -->
     <section class="collection" id="colecao">
@@ -159,12 +214,12 @@
       </div>
 
       <!-- Obra em largura total -->
-      <figure class="art art--full reveal" id="destaque" tabindex="0" role="button"
+      <figure class="art art--full reveal" id="destaque" tabindex="0" role="button" style="--r: 1.483"
         data-title="Tarde de Domingo na Ilha de Grande Jatte" data-artist="Georges Seurat" data-year="1884–1886"
         data-tech="Óleo sobre tela" data-dim="207,6 × 308 cm" data-price="R$ 5.200.000" data-num="06"
         data-img="https://commons.wikimedia.org/wiki/Special:FilePath/A_Sunday_on_La_Grande_Jatte,_Georges_Seurat,_1884.jpg?width=2400">
         <div class="art__frame">
-          <img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/A_Sunday_on_La_Grande_Jatte,_Georges_Seurat,_1884.jpg?width=2400"
+          <img loading="lazy" data-parallax="0.1" data-parallax-clamp="0.055" src="https://commons.wikimedia.org/wiki/Special:FilePath/A_Sunday_on_La_Grande_Jatte,_Georges_Seurat,_1884.jpg?width=2400"
             alt="Tarde de Domingo na Ilha de Grande Jatte, de Georges Seurat" />
         </div>
         <figcaption class="art__caption art__caption--full">
@@ -214,6 +269,7 @@
 
       <!-- Interlúdio -->
       <aside class="interlude reveal">
+        <span class="interlude__ghost" data-parallax="0.28" aria-hidden="true">Acervo</span>
         <blockquote>
           “A arte lava da alma <em>a poeira do cotidiano</em>.”
           <cite>— Pablo Picasso</cite>
@@ -269,12 +325,12 @@
       </div>
 
       <!-- Obra final em largura total -->
-      <figure class="art art--full reveal" tabindex="0" role="button"
+      <figure class="art art--full reveal" tabindex="0" role="button" style="--r: 1.204"
         data-title="A Ronda Noturna" data-artist="Rembrandt van Rijn" data-year="1642"
         data-tech="Óleo sobre tela" data-dim="363 × 437 cm" data-price="Sob consulta" data-num="12"
         data-img="https://commons.wikimedia.org/wiki/Special:FilePath/The_Night_Watch_-_HD.jpg?width=2400">
         <div class="art__frame">
-          <img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/The_Night_Watch_-_HD.jpg?width=2400"
+          <img loading="lazy" data-parallax="0.1" data-parallax-clamp="0.055" src="https://commons.wikimedia.org/wiki/Special:FilePath/The_Night_Watch_-_HD.jpg?width=2400"
             alt="A Ronda Noturna, de Rembrandt van Rijn" />
         </div>
         <figcaption class="art__caption art__caption--full">
@@ -297,7 +353,8 @@
         <div>
           <h2 class="about__title reveal">Curadoria de museu,<br /><em>acesso de colecionador.</em></h2>
           <p class="about__text reveal">
-            A Galeria AUVP é o braço de aquisições do Museu de Artes AUVP.
+            A Galeria AUVP é o braço de aquisições do Museu de Artes AUVP,
+            com sede em Goiânia, Goiás.
             Cada obra do acervo passa por autenticação, laudo de conservação e
             documentação de proveniência antes de ser oferecida — e a compra é
             conduzida pessoalmente por um curador, do primeiro contato à
@@ -320,7 +377,7 @@
     <div class="site-footer__cta reveal">
       <p class="kicker">Aquisições</p>
       <a class="site-footer__mail" href="mailto:galeria@auvp.com.br">galeria@auvp.com.br</a>
-      <p class="site-footer__note">Atendimento por agendamento — São Paulo, Brasil</p>
+      <p class="site-footer__note">Atendimento por agendamento — Goiânia, Goiás, Brasil</p>
     </div>
     <div class="site-footer__bottom">
       <span>© 2026 Galeria AUVP — Museu de Artes AUVP</span>
